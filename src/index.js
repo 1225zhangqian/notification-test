@@ -1,3 +1,3 @@
 
-import Notification from './notification'
-export default Notification 
+import Tip from './notification'
+export default Tip 

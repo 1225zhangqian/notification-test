@@ -14,7 +14,7 @@ module.exports = {
     path: __dirname + '/dist',
     filename: '[name].js',
     libraryExport: 'default',
-    library: 'Notification',
+    library: 'Tip',
     libraryTarget: 'umd',
   },
   externals: {

@@ -14,14 +14,11 @@ $ yarn add notification-test
 
 ```javascript
   import React, { Component } from 'react';
-  import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
-  // minified version is also included
-  // import 'react-toastify/dist/ReactToastify.min.css';
+  import Tip from 'is-notification'
 
   class App extends Component {
     notify = () => {
-       Notification.open({
+       Tip.open({
         message:'message',
         description:'description'
        })
@@ -40,7 +37,7 @@ $ yarn add notification-test
 
 
 ```js
-   Notification.open({
+   Tip.open({
     message:'message',
     description:'description',
     duration: 0
@@ -50,19 +47,19 @@ $ yarn add notification-test
 ### Notifications with color reminders
 
 ```js
-   Notification.info({
+   Tip.info({
     message:'info',
     description:'info'
    })
-   Notification.success({
+   Tip.success({
     message:'success',
     description:'success'
    })
-   Notification.warning({
+   Tip.warning({
     message:'warning',
     description:'warning'
    })
-   Notification.error({
+   Tip.error({
     message:'error',
     description:'error'
    })
