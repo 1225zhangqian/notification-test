@@ -50,7 +50,7 @@ $ yarn add notification-test
 ### Notifications with color reminders
 
 ```js
-    Notification.info({
+   Notification.info({
     message:'info',
     description:'info'
    })
