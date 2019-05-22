@@ -1,4 +1,4 @@
-# @sfx/notification
+# notification-test
 
 
-🎉 @sfx/notification allow you to add notification to your app with ease. No more nonsense!
+🎉 notification-test allow you to add notification to your app with ease. No more nonsense!
