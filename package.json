@@ -1,10 +1,11 @@
 {
   "name": "notification-test",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress"
+    "clean": "rimraf dist/*",
+    "build": "npm run clean && webpack --progress"
   },
   "author": "lucy",
   "license": "ISC",
@@ -21,9 +22,9 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.0",
     "@babel/polyfill": "^7.0.0",
-    "reactstrap": "^8.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-transition-group": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.1.0",

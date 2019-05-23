@@ -19,9 +19,9 @@ module.exports = {
   },
   externals: {
     react: 'react',
-    reactstrap: 'reactstrap',
     'react-dom': 'react-dom',
     'prop-types': 'prop-types',
+    'react-transition-group': 'react-transition-group'
   },
   module: {
     rules: [

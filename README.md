@@ -64,3 +64,27 @@ $ yarn add notification-test
     description:'error'
    })
 ```
+### Notifications position
+
+```js
+   Tip.info({
+    message:'info',
+    description:'info',
+    placement: 'topLeft'
+   })
+   Tip.success({
+    message:'success',
+    description:'success',
+    placement: 'bottomLeft'
+   })
+   Tip.warning({
+    message:'warning',
+    description:'warning',
+    placement: 'topRight'
+   })
+   Tip.error({
+    message:'error',
+    description:'error',
+    placement: 'bottomRight'
+   })
+```

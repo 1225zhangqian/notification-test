@@ -1,39 +1,28 @@
 import React, { Component } from 'react';
-import { Fade } from 'reactstrap';
+// import { Fade } from 'reactstrap';
+import { Transition } from 'react-transition-group';
 export default class Animate extends Component {
-  state = {
-    fadeinenter: false,
-    fadeoutenter: false
-  }
-  onEnter = () => {
-    this.setState({ fadeinenter: true })
-  }
-  onEntered = () => {
-    this.setState({ fadeinenter: false })
-  }
-  onExit = () => {
-    this.setState({ fadeoutenter: true })
-  }
   onExited = () => {
     this.props.onExited()
-    this.setState({ fadeoutenter: false })
   }
   render() {
     const prefixCls = this.props.className
     const componentClass = `${prefixCls}-fade`
-    const fadeinenter = this.state.fadeinenter ? `${componentClass}-bouncein-enter` : ''
-    const fadeoutenter = this.state.fadeoutenter ? `${componentClass}-fadeout` : ''
     return (
-      <Fade
+
+      <Transition
         in={this.props.fadein}
-        onEnter={this.onEnter}
-        onEntered={this.onEntered}
-        onExit={this.onExit}
         onExited={this.onExited}
-        className={`${componentClass}  ${fadeinenter} ${fadeoutenter}`}
+        unmountOnExit={false}
+        timeout={300}
+        appear={true}
       >
-        {this.props.children}
-      </Fade >
+        {state => (<div className={`${componentClass}  fade-${state}`}>
+          {this.props.children}
+        </div>)}
+
+      </Transition  >
+
     );
   }
 }
